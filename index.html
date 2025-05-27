@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz do Milhão</title>
-    <style>
-      body {
-        font-family: "Segoe UI", sans-serif;
-        background: linear-gradient(to right, #f0c400, #ff9e60);
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: rgba(107, 142, 35);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: 0 0 20px rgba(9, 0, 0, 0.2);
-      }
-      h1, h2, h3 {
-        margin-bottom: 20px;
-      }
-      button {
-        background: #fff;
-        color: #006400;
-        border: none;
-        padding: 10px 20px;
-        margin: 10px;
-        border-radius: 30px;
-        font-size: 18px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      button:hover {
-        background: #f0c400;
-        color: #fff;
-      }
-      .hidden {
-        display: none;
-      }
-      .emoji {
-        font-size: 9.5rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div id="inicio">
-        <h3>Bem-vindo ao</h3>
-        <h1>🎉 🌽 Quiz do Milhão! 🌽 🎉</h1>
-        <h3>Escolha um dos temas:</h3>
-        <button onclick="startQuiz('Tecnologia')">Tecnologia 💻</button>
-        <button onclick="startQuiz('História')">História 📜</button>
-        <button onclick="startQuiz('Biologia')">Biologia 🌿</button>
-        <button onclick="startQuiz('Cinema')">Cinema 🎬</button>
-        <button onclick="startQuiz('Música')">Música 🎶</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz do Milhão</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    #inicio, #quiz, #resultado {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #4CAF50; /* verde */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .hidden {
+      display: none;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    li label {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
-      <div id="quiz" class="hidden">
-        <h2 id="tema"></h2>
-        <div id="pergunta"></div>
-        <div id="opcoes"></div>
-      </div>
+  <div id="inicio">
+    <h3>Bem-vindo ao</h3>
+    <h1>🎉 🌽 Quiz do Milhão! 🌽 🎉</h1>
+    <button onclick="comecar()">Começar</button>
+  </div>
 
-      <div id="resultado" class="hidden">
-        <h2 id="mensagem"></h2>
-        <p id="porcentagem"></p>
-        <div id="emoji-acerto" class="emoji"></div>
-        <button onclick="recomecar()">Recomeçar</button>
-      </div>
-    </div>
+  <div id="quiz" class="hidden">
+    <h2 id="pergunta"></h2>
+    <ul id="respostas"></ul>
+    <button onclick="proximaQuestao()">Próxima</button>
+  </div>
 
-    <script src="index.js"></script>
-  </body>
+  <div id="resultado" class="hidden">
+    <h2>Resultado</h2>
+    <p id="porcentagem"></p>
+    <p id="mensagem"></p>
+    <p id="emoji-acerto" style="font-size: 2rem;"></p>
+    <button onclick="recomecar()">Recomeçar</button>
+  </div>
+
+<script src="index.js"></script>
+
+
+</body>
 </html>
