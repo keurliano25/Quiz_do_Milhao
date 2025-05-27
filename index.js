@@ -1,422 +1,130 @@
-<script>
-      const perguntas = {
-        Tecnologia: [
-          [
-            "Qual empresa criou o sistema operacional Windows?",
-            "Apple",
-            "Google",
-            "Microsoft",
-            2,
-          ],
-          [
-            "Qual é o navegador padrão do Google?",
-            "Firefox",
-            "Chrome",
-            "Safari",
-            1,
-          ],
-          [
-            "O que significa a sigla 'USB'?",
-            "Unidade Serial de Bateria",
-            "Universal Serial Bus",
-            "Unidade de Sistema Básico",
-            1,
-          ],
-          [
-            "Qual empresa é conhecida pelo iPhone?",
-            "Samsung",
-            "Apple",
-            "Nokia",
-            1,
-          ],
-          [
-            "O que é Wi-Fi?",
-            "Um tipo de vírus de computador",
-            "Um cabo de rede",
-            "Uma tecnologia de conexão sem fio",
-            2,
-          ],
-          [
-            "Qual desses é um sistema operacional?",
-            "Instagram",
-            "Linux",
-            "Excel",
-            1,
-          ],
-          [
-            "Qual dessas linguagens é usada para criar sites?",
-            "HTML",
-            "Excel",
-            "Photoshop",
-            0,
-          ],
-          [
-            "O que é um 'mouse' no computador?",
-            "Um vírus",
-            "Um dispositivo de entrada",
-            "Um tipo de software",
-            1,
-          ],
-          [
-            "Qual é o nome do robô assistente do Google?",
-            "Alexa",
-            "Siri",
-            "Google Assistente",
-            2,
-          ],
-          [
-            "O que é um 'smartphone'?",
-            "Um telefone com funcionalidades avançadas",
-            "Um relógio inteligente",
-            "Um computador de mesa",
-            0,
-          ],
-        ],
-        História: [
-          [
-            "Quem descobriu o Brasil?",
-            "Cristóvão Colombo",
-            "Pedro Álvares Cabral",
-            "Dom Pedro I",
-            1,
-          ],
-          [
-            "Em que ano ocorreu a Independência do Brasil?",
-            "1500",
-            "1889",
-            "1822",
-            2,
-          ],
-          [
-            "Qual civilização construiu as pirâmides do Egito?",
-            "Maias",
-            "Egípcios",
-            "Romanos",
-            1,
-          ],
-          [
-            "Quem foi o primeiro presidente do Brasil?",
-            "Juscelino Kubitschek",
-            "Deodoro da Fonseca",
-            "Getúlio Vargas",
-            1,
-          ],
-          [
-            "A Segunda Guerra Mundial terminou em que ano?",
-            "1945",
-            "1939",
-            "1950",
-            0,
-          ],
-          [
-            "Quem foi Napoleão Bonaparte?",
-            "Um cientista",
-            "Um imperador francês",
-            "Um pintor italiano",
-            1,
-          ],
-          ["Onde nasceu a democracia?", "Roma", "Atenas", "Paris", 1],
-          [
-            "Qual país foi o berço do nazismo?",
-            "Itália",
-            "Alemanha",
-            "Rússia",
-            1,
-          ],
-          [
-            "Qual revolução marcou o fim da monarquia no Brasil?",
-            "Revolução Francesa",
-            "Proclamação da República",
-            "Revolução Industrial",
-            1,
-          ],
-          [
-            "Quem foi Tiradentes?",
-            "Um imperador",
-            "Um líder da Inconfidência Mineira",
-            "Um presidente",
-            1,
-          ],
-        ],
-        Biologia: [
-          [
-            "Qual órgão do corpo humano bombeia sangue?",
-            "Coração",
-            "Estômago",
-            "Fígado",
-            0,
-          ],
-          [
-            "Qual parte do corpo humano é responsável pela respiração?",
-            "Coração",
-            "Pulmões",
-            "Rins",
-            1,
-          ],
-          [
-            "O que as plantas produzem através da fotossíntese?",
-            "Oxigênio",
-            "Água",
-            "Nitrogênio",
-            0,
-          ],
-          [
-            "Qual é o maior órgão do corpo humano?",
-            "Fígado",
-            "Cérebro",
-            "Pele",
-            2,
-          ],
-          [
-            "Qual desses animais é um mamífero?",
-            "Jacaré",
-            "Golfinho",
-            "Galinha",
-            1,
-          ],
-          [
-            "O que é DNA?",
-            "Um vírus",
-            "Um tipo de célula",
-            "Material genético",
-            2,
-          ],
-          ["Qual desses é um réptil?", "Cobra", "Pinguim", "Cavalo", 0],
-          [
-            "Onde ocorre a digestão dos alimentos?",
-            "Coração",
-            "Estômago",
-            "Pulmões",
-            1,
-          ],
-          [
-            "O sangue é bombeado por qual órgão?",
-            "Fígado",
-            "Coração",
-            "Rins",
-            1,
-          ],
-          [
-            "Qual ser vivo é considerado o mais simples?",
-            "Bactéria",
-            "Peixe",
-            "Fungo",
-            0,
-          ],
-        ],
-        Cinema: [
-          [
-            "Quem é o bruxo protagonista da saga 'Harry Potter'?",
-            "Ron Weasley",
-            "Harry Potter",
-            "Draco Malfoy",
-            1,
-          ],
-          [
-            "Qual é o nome do robô dourado em 'Star Wars'?",
-            "R2-D2",
-            "C-3PO",
-            "BB-8",
-            1,
-          ],
-          [
-            "Em qual filme um tubarão gigante aterroriza uma praia?",
-            "Piranhas",
-            "Tubarão",
-            "Titanic",
-            1,
-          ],
-          [
-            "Quem interpretou o personagem 'Homem de Ferro'?",
-            "Tom Holland",
-            "Chris Hemsworth",
-            "Robert Downey Jr.",
-            2,
-          ],
-          [
-            "Qual é o nome do brinquedo cowboy em 'Toy Story'?",
-            "Woody",
-            "Buzz",
-            "Andy",
-            0,
-          ],
-          [
-            "Em que filme um dinossauro gigante é recriado em laboratório?",
-            "King Kong",
-            "Jurassic Park",
-            "O Parque dos Bichos",
-            1,
-          ],
-          [
-            "Qual é o nome da princesa em 'A Bela e a Fera'?",
-            "Cinderela",
-            "Aurora",
-            "Bela",
-            2,
-          ],
-          [
-            "Qual super-herói é conhecido como 'O Cavaleiro das Trevas'?",
-            "Superman",
-            "Batman",
-            "Homem-Aranha",
-            1,
-          ],
-          [
-            "Qual filme retrata um navio que afunda após bater em um iceberg?",
-            "Náufrago",
-            "Titanic",
-            "Piratas do Caribe",
-            1,
-          ],
-          [
-            "Em que filme o personagem Shrek aparece?",
-            "Enrolados",
-            "Shrek",
-            "Os Incríveis",
-            1,
-          ],
-        ],
-        Música: [
-          [
-            "Qual cantora é conhecida pelo hit 'Hello'?",
-            "Adele",
-            "Beyoncé",
-            "Rihanna",
-            0,
-          ],
-          [
-            "Qual banda é famosa por músicas como 'Yellow' e 'Viva La Vida'?",
-            "Coldplay",
-            "U2",
-            "Beatles",
-            0,
-          ],
-          [
-            "Qual desses é um instrumento de corda?",
-            "Violino",
-            "Piano",
-            "Trompete",
-            0,
-          ],
-          [
-            "Quem foi conhecido como o 'Rei do Pop'?",
-            "Justin Timberlake",
-            "Elvis Presley",
-            "Michael Jackson",
-            2,
-          ],
-          [
-            "Qual é o nome do estilo musical típico do Nordeste brasileiro?",
-            "Forró",
-            "Samba",
-            "Axé",
-            0,
-          ],
-          [
-            "Qual artista canta a música 'Shape of You'?",
-            "Ed Sheeran",
-            "Shawn Mendes",
-            "Harry Styles",
-            0,
-          ],
-          [
-            "Qual desses é um gênero musical brasileiro?",
-            "Blues",
-            "Bossa Nova",
-            "Jazz",
-            1,
-          ],
-          [
-            "Quem canta a música 'Garota de Ipanema'?",
-            "Roberto Carlos",
-            "Tom Jobim",
-            "Lulu Santos",
-            1,
-          ],
-          [
-            "Qual é o nome do vocalista do Queen?",
-            "Mick Jagger",
-            "Freddie Mercury",
-            "Axl Rose",
-            1,
-          ],
-          [
-            "Qual instrumento o baterista toca?",
-            "Guitarra",
-            "Bateria",
-            "Saxofone",
-            1,
-          ],
-        ],
-      };
+const questoes = [
+  {
+    pergunta: "Qual é o maior planeta do sistema solar?",
+    respostas: [
+      { texto: "Terra", correta: false },
+      { texto: "Júpiter", correta: true },
+      { texto: "Saturno", correta: false },
+      { texto: "Marte", correta: false }
+    ]
+  },
+  {
+    pergunta: "Qual é a capital da França?",
+    respostas: [
+      { texto: "Paris", correta: true },
+      { texto: "Londres", correta: false },
+      { texto: "Berlim", correta: false },
+      { texto: "Roma", correta: false }
+    ]
+  },
+  {
+    pergunta: "Qual elemento químico tem o símbolo 'O'?",
+    respostas: [
+      { texto: "Ouro", correta: false },
+      { texto: "Oxigênio", correta: true },
+      { texto: "Prata", correta: false },
+      { texto: "Hélio", correta: false }
+    ]
+  }
+];
 
-      let temaAtual = "";
-      let questoes = [];
-      let atual = 0;
-      let acertos = 0;
+let indiceQuestao = 0;
+let acertos = 0;
 
-      function startQuiz(tema) {
-        temaAtual = tema;
-        questoes = perguntas[tema];
-        atual = 0;
-        acertos = 0;
-        document.getElementById("inicio").classList.add("hidden");
-        document.getElementById("quiz").classList.remove("hidden");
-        document.getElementById("tema").innerText = `Tema: ${tema}`;
-        mostrarPergunta();
-      }
+function comecar() {
+  indiceQuestao = 0;
+  acertos = 0;
+  document.getElementById("inicio").classList.add("hidden");
+  document.getElementById("resultado").classList.add("hidden");
+  document.getElementById("quiz").classList.remove("hidden");
+  mostrarQuestao();
+}
 
-      function mostrarPergunta() {
-        let q = questoes[atual];
-        document.getElementById("pergunta").innerHTML = `<h3>${q[0]}</h3>`;
-        document.getElementById("opcoes").innerHTML = "";
-        ["A", "B", "C"].forEach((letra, i) => {
-          const botao = document.createElement("button");
-          botao.innerText = `${letra}) ${q[i + 1]}`;
-          botao.onclick = () => responder(i);
-          document.getElementById("opcoes").appendChild(botao);
-        });
-      }
+function mostrarQuestao() {
+  const questaoAtual = questoes[indiceQuestao];
+  document.getElementById("pergunta").textContent = questaoAtual.pergunta;
 
-      function responder(escolha) {
-        if (escolha === questoes[atual][4]) acertos++;
-        atual++;
-        if (atual < questoes.length) {
-          mostrarPergunta();
-        } else {
-          mostrarResultado();
-        }
-      }
+  const ul = document.getElementById("respostas");
+  ul.innerHTML = "";
 
-      function mostrarResultado() {
-        document.getElementById("quiz").classList.add("hidden");
-        document.getElementById("resultado").classList.remove("hidden");
-        const porcentagem = Math.round((acertos / questoes.length) * 100);
-        document.getElementById(
-          "porcentagem"
-        ).innerText = `Você acertou ${porcentagem}% (${acertos} de ${questoes.length})`;
+  questaoAtual.respostas.forEach((resp, i) => {
+    const li = document.createElement("li");
 
-        let mensagem = "";
-        let emojiAcerto = "";
-        if (porcentagem === 100) {
-          mensagem =
-            "Eita Caramba! Você huMILHOU total! Acertou tudo e provou que é o rei (ou rainha) do Milhão!";
-          emojiAcerto = "👑🥳🌽";
-        } else if (porcentagem >= 80) {
-          mensagem =
-            "Uau! Você quase zerou! Tá com a mente afiada, só mais um pouco e vira lenda!";
-          emojiAcerto = "🔥👍😮";
-        } else {
-          mensagem =
-            "Eita... deu uma escorregada, hein? Mas relaxa, até os gênios começaram errando!";
-          emojiAcerto =<img src=https://cdn.glitch.global/356fb7bb-8330-4708-a03e-4a7b7a479ade/ChatGPT_Image_8_de_mai._de_2025__15_18_58-removebg-preview.png?v=1746731038127" alt="coroa" width="80" />;
-        }
-        document.getElementById("mensagem").innerText = mensagem;
-        document.getElementById("emoji-acerto").innerHTML = emojiAcerto;
-      }
+    const input = document.createElement("input");
+    const inputId = `resposta-${indiceQuestao}-${i}`;
+    input.type = "radio";
+    input.name = "resposta";
+    input.value = i;
+    input.id = inputId;
 
-      function recomecar() {
-        document.getElementById("resultado").classList.add("hidden");
-        document.getElementById("inicio").classList.remove("hidden");
-      }
-    </script>
+    const label = document.createElement("label");
+    label.htmlFor = inputId;
+    label.textContent = resp.texto;
+
+    li.appendChild(input);
+    li.appendChild(label);
+    ul.appendChild(li);
+  });
+}
+
+function proximaQuestao() {
+  const radios = document.getElementsByName("resposta");
+  let selecionado = -1;
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      selecionado = i;
+      break;
+    }
+  }
+
+  if (selecionado === -1) {
+    alert("Por favor, selecione uma resposta!");
+    return;
+  }
+
+  if (questoes[indiceQuestao].respostas[selecionado].correta) {
+    acertos++;
+  }
+
+  indiceQuestao++;
+
+  if (indiceQuestao < questoes.length) {
+    mostrarQuestao();
+  } else {
+    mostrarResultado();
+  }
+}
+
+function mostrarResultado() {
+  document.getElementById("quiz").classList.add("hidden");
+  document.getElementById("resultado").classList.remove("hidden");
+
+  const porcentagem = Math.round((acertos / questoes.length) * 100);
+  document.getElementById("porcentagem").textContent =
+    `Você acertou ${porcentagem}% (${acertos} de ${questoes.length})`;
+
+  let mensagem = "";
+  let emojiAcerto = "";
+
+  if (porcentagem === 100) {
+    mensagem = "Eita Caramba! Você huMILHOU total! Acertou tudo e provou que é o rei (ou rainha) do Milhão!";
+    emojiAcerto = "👑🥳🌽";
+  } else if (porcentagem >= 80) {
+    mensagem = "Uau! Você quase zerou! Mandou super bem!";
+    emojiAcerto = "👏🔥🌽";
+  } else if (porcentagem >= 50) {
+    mensagem = "Boa! Você se saiu bem. Um pouco mais de treino e você chega lá!";
+    emojiAcerto = "👍🙂🌽";
+  } else {
+    mensagem = "Opa! Foi por pouco. Que tal tentar de novo?";
+    emojiAcerto = "😅🌽";
+  }
+
+  document.getElementById("mensagem").textContent = mensagem;
+  document.getElementById("emoji-acerto").textContent = emojiAcerto;
+}
+
+function recomecar() {
+  document.getElementById("resultado").classList.add("hidden");
+  document.getElementById("inicio").classList.remove("hidden");
+}
